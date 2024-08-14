@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: leandromatsuokapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: leandromatsuokapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: leandromatsuokapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: leandromatsuokapipelinesjavascriptdocker 
+          image: matsuoka01.azurecr.io/leandromatsuokapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
